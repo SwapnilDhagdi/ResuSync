@@ -1,0 +1,16 @@
+.Log_Sign_up{
+    display: flex;
+    gap: 10px;
+}
+.Login_Button,.Signup_Button{
+
+    border-radius: 5px;
+    height: 2rem;
+    width: 4rem;
+    border: 1px solid black;
+    text-decoration: none;
+}
+.Login_Button:hover ,.Signup_Button:hover{
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}

@@ -1,0 +1,86 @@
+.form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+}
+
+.form-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.generic-form .form-group {
+  margin-bottom: 15px;
+}
+
+.generic-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #555;
+}
+
+.generic-form input,
+.generic-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 1em;
+}
+
+.generic-form input:focus,
+.generic-form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.generic-form textarea {
+  resize: vertical;
+}
+
+.form-submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.form-submit-btn:hover {
+  background-color: #0056b3;
+}
+/*verification code*/
+.code-input-container {
+    display: flex;
+    gap: 15px; /* Space between the input boxes */
+    justify-content: center;
+    padding: 20px;
+}
+
+.code-input-box {
+    width: 60px; /* Size of the box */
+    height: 70px; /* Height of the box */
+    text-align: center;
+    font-size: 28px;
+    font-weight: bold;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.code-input-box:focus {
+    border-color: #007bff; /* Highlight color on focus */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}

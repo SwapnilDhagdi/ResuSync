@@ -1,0 +1,272 @@
+/*Button*/
+.ghost-button {
+  /* Layout & Spacing */
+  padding: 10px 20px;
+  background-color: transparent; /* Transparent background */
+  border-radius: 6px;
+  cursor: pointer;
+
+  /* Color & Typography */
+  border: 2px solid #333; /* Prominent border color */
+  color: #333; /* Text color matches border */
+  font-size: 16px;
+  font-weight: 500;
+  
+  /* Transition for smooth hover effect */
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Hover State */
+.ghost-button:hover {
+  background-color: #333; /* Fill the background */
+  color: white; /* Change text to white for contrast */
+}
+
+/* Focus State (Accessibility) */
+.ghost-button:focus {
+  outline: 2px solid #007bff; /* Use primary color for focus ring */
+  outline-offset: 2px;
+}
+/* General Button Reset/Base */
+.glow-button {
+    /* Dimensions and Text */
+    padding: 12px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff; /* White text color */
+    
+    /* Shape and Border */
+    border: none;
+    border-radius: 8px; /* Slightly rounded corners */
+    cursor: pointer;
+    text-transform: uppercase;
+    
+    /* Background Gradient */
+    background: linear-gradient(135deg, #6a82fb, #fc5c7d); /* Blue-to-Pink Gradient */
+    
+    /* Smooth Transitions for Hover */
+    transition: all 0.3s ease;
+}
+
+/* Hover Effect: The Glow */
+.glow-button:hover {
+    /* Scale the button slightly */
+    transform: translateY(-2px); 
+    
+    /* Add a subtle box shadow/glow */
+    box-shadow: 0 8px 25px rgba(106, 130, 251, 0.6), /* Blue glow */
+                0 4px 15px rgba(252, 92, 125, 0.4); /* Pink secondary shadow */
+}
+
+/* Active/Click Effect */
+.glow-button:active {
+    /* Shrink the button slightly to give a "press" feeling */
+    transform: translateY(1px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Remove the full glow on click */
+}
+/* General Layout and Structure */
+.assessment-container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f4f7f9; /* Light background for the overall page */
+    font-family: Arial, sans-serif;
+}
+
+.summary-card,
+.insight-card,
+.breakdown-card,
+.suggestions-section.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    text-align: justify;
+}
+
+.section-title {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ecf0f1;
+    padding-bottom: 8px;
+}
+
+/* 1. Header and Match Score */
+.summary-card {
+    text-align: center;
+    padding: 30px;
+}
+
+.match-score-display {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #34495e;
+    margin-bottom: 5px;
+}
+
+.score-value {
+    color: #27ae60; /* Success/Green for the score value */
+    font-size: 3.5rem;
+}
+
+.recommendation-level {
+    font-size: 1.2rem;
+    color: #8e44ad; /* Highlight color for recommendation */
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.overall-assessment h2 {
+    font-size: 1.1rem;
+    color: #3498db;
+    margin-top: 15px;
+    text-align: justify;
+}
+
+.overall-assessment p {
+    color: #555;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+/* 2. Compatibility Scores */
+.compatibility-section {
+    display: flex;
+    justify-content: space-around;
+    background-color: #ecf0f1;
+    padding: 15px 0;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    flex-direction: column;
+    
+}
+
+.compatibility-item {
+    text-align: center;
+
+}
+
+.compatibility-item .label {
+    display: block;
+    font-size: 0.9rem;
+    color: #7f8c8d;
+}
+
+.compatibility-item .value {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-top: 5px;
+    text-align: justify;
+    margin: 10px;
+    padding: 5px;
+}
+
+/* 3. Key Insights Section (Gridded) */
+.key-insights-section {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); */
+    grid-template-rows: repeat(auto-fit,minmax(280px,1fr));
+    gap: 20px;
+}
+
+.insight-card {
+    padding: 20px;
+}
+
+.insight-card h3 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+.strength-card { border-left: 5px solid #2ecc71; }
+.weakness-card { border-left: 5px solid #f39c12; }
+.gap-card { border-left: 5px solid #e74c3c; }
+
+.insight-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.insight-card li {
+    padding: 5px 0;
+    color: #555;
+}
+
+/* 4. Breakdown Section */
+.breakdown-section {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.list-group {
+    margin-top: 15px;
+}
+
+.list-item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
+}
+
+.list-item.success {
+    background-color: #e8f8f5;
+    border: 1px solid #2ecc71;
+}
+.list-item.danger {
+    background-color: #fceceb;
+    border: 1px solid #e74c3c;
+}
+
+.list-item .label {
+    font-weight: 600;
+    color: #34495e;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* Tag List Styling */
+.tag-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.tag-list.positive .tag {
+    background-color: #2ecc71;
+    color: #ffffff;
+}
+
+.tag-list.negative .tag {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+/* 5. Suggestions Section */
+.suggestions-section ol {
+    padding-left: 20px;
+}
+
+.suggestions-section li {
+    margin-bottom: 10px;
+    line-height: 1.5;
+    color: #555;
+    text-align: justify;
+}

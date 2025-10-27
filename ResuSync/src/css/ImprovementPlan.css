@@ -1,0 +1,361 @@
+/* Container */
+.improvement-plan-container {
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+/* Header Section */
+.plan-header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+.plan-title-wrapper {
+    flex: 1;
+}
+
+.plan-main-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #2d3748;
+    margin: 0 0 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.title-icon {
+    font-size: 2.5rem;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.plan-subtitle {
+    font-size: 1.1rem;
+    color: #718096;
+    margin: 0;
+}
+
+.refresh-button {
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.refresh-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.refresh-icon {
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+.refresh-button:hover .refresh-icon {
+    animation: spin 0.6s ease;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Content Area */
+.plan-content {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Headers */
+.plan-header {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #667eea;
+    margin: 2rem 0 1rem 0;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #667eea;
+}
+
+/* Sections */
+.plan-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    border-radius: 12px;
+    border-left: 5px solid #667eea;
+    transition: all 0.3s ease;
+}
+
+.plan-section:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2d3748;
+    margin: 0 0 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.section-icon {
+    font-size: 1.5rem;
+}
+
+/* Lists */
+.improvement-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.improvement-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.75rem;
+    margin: 0.5rem 0;
+    background: white;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.improvement-item:hover {
+    background: #f7fafc;
+    transform: translateX(5px);
+}
+
+.bullet {
+    color: #667eea;
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    line-height: 1.5;
+}
+
+.item-text {
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Paragraphs */
+.plan-paragraph {
+    font-size: 1.05rem;
+    color: #4a5568;
+    line-height: 1.8;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f7fafc;
+    border-radius: 8px;
+    border-left: 3px solid #cbd5e0;
+}
+
+/* Footer */
+.plan-footer {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+}
+
+.footer-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    border-radius: 10px;
+    border-left: 5px solid #fdcb6e;
+}
+
+.tip-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.footer-tip p {
+    margin: 0;
+    color: #2d3748;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.footer-tip strong {
+    color: #d63031;
+    font-weight: 700;
+}
+
+/* Loading State */
+.loading-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 15px;
+}
+
+.spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #667eea;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 1.5rem;
+}
+
+.loading-state p {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2d3748;
+    margin: 0.5rem 0;
+}
+
+.loading-subtext {
+    font-size: 0.95rem;
+    color: #718096;
+}
+
+/* Error State */
+.error-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 15px;
+}
+
+.error-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.error-state h3 {
+    font-size: 1.8rem;
+    color: #e53e3e;
+    margin: 1rem 0;
+}
+
+.error-state p {
+    font-size: 1.1rem;
+    color: #718096;
+    margin: 1rem 0 2rem;
+}
+
+.retry-button {
+    padding: 0.75rem 2rem;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.retry-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: white;
+    border-radius: 15px;
+}
+
+.empty-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.6;
+}
+
+.empty-state h3 {
+    font-size: 1.8rem;
+    color: #2d3748;
+    margin: 1rem 0;
+}
+
+.empty-state p {
+    font-size: 1.1rem;
+    color: #718096;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .improvement-plan-container {
+        margin: 1rem;
+        padding: 1rem;
+    }
+
+    .plan-header-section {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .plan-main-title {
+        font-size: 1.8rem;
+    }
+
+    .plan-content {
+        padding: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+    }
+
+    .refresh-button {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .plan-main-title {
+        font-size: 1.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title-icon {
+        font-size: 2rem;
+    }
+
+    .improvement-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

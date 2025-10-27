@@ -1,0 +1,43 @@
+/* Container for the entire footer */
+.footer-container {
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  padding: 20px 0; /* Vertical padding */
+  width: 100%;
+  margin-top: auto;
+  position: fixed; /* Helpful for pushing to the bottom of the page content */
+}
+
+/* Centralized content area */
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto; /* Center the content */
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  text-align: center;
+}
+
+/* Styles for the links section */
+.footer-links {
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  color: #ccc; /* Lighter link color */
+  text-decoration: none; /* Remove underline */
+  margin: 0 15px; /* Spacing between links */
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #fff; /* White on hover */
+}
+
+/* Styles for the info section */
+.footer-info p {
+  margin: 5px 0;
+  font-size: 0.9em;
+  color: #aaa;
+}

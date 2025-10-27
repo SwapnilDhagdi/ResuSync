@@ -1,0 +1,95 @@
+/* Container and Form Styling */
+.file-form-container {
+  padding: 25px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  max-width: 450px;
+  margin: 40px auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff;
+  opacity: 100;
+  transform: translateX(20px);
+  transition: opacity 1s ease , transform 1s ease;
+}
+
+.file-form-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 25px;
+  font-family: Arial, sans-serif;
+}
+
+/* Input Group Styling */
+.file-input-group {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px dashed #b0c4de; /* Light blue dashed border */
+  border-radius: 6px;
+  background-color: #f9f9ff;
+}
+
+.file-input-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #444;
+  font-family: Arial, sans-serif;
+}
+
+/* Customizing the File Input */
+.file-input-group input[type="file"] {
+  /* Allows the default file selector to show up on a new line */
+  display: block; 
+  margin-top: 5px;
+  padding: 5px;
+}
+
+/* Selected File Text */
+.file-input-group small {
+  display: block;
+  margin-top: 5px;
+  color: #6a6a6a;
+  font-size: 0.9em;
+}
+
+/* Submit Button Styling */
+.file-submit-button {
+  width: 100%;
+  padding: 12px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.3s, opacity 0.3s;
+}
+
+.file-submit-button:hover:not(:disabled) {
+  background-color: #0056b3;
+}
+
+.file-submit-button:disabled {
+  background-color: #b0c4de;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* Submission Message Styling */
+.submission-message {
+  margin-top: 25px;
+  padding: 15px;
+  border: 1px solid #28a745;
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 6px;
+  font-family: monospace;
+  white-space: pre-wrap; /* Ensures line breaks in the message are respected */
+}
+
+/* Error/Validation Message Styling (for the "Please select both files" warning) */
+.submission-message.error {
+    border-color: #dc3545;
+    background-color: #f8d7da;
+    color: #721c24;
+}
