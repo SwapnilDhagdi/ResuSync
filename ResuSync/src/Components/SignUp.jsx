@@ -43,7 +43,6 @@ const [isHidden,setIsHidden]=useState(true);
     
   instance.get('/api/sendEmail',{timeout:0,params:{email:formState.email,username:formState.name}})
   .then(function (response){
-    console.log(response.data);
     if(response.data==-1){
       setErrorMsg("Email already Present")
     }else{
@@ -64,7 +63,6 @@ const VerificationCodeInput = () => {
             password:formState.password
         })
         .then(function(response){
-            console.log(response.data)
             if(!response.data){
                 setErrorMsg("Email already present");
             }else{ 

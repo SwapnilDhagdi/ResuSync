@@ -1,0 +1,60 @@
+version: "3.8"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: resusync_db
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 2004@Swapnil
+      POSTGRES_DB: resusync
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - resusync_net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build: ./demo
+    container_name: resusync_backend
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/resusync
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: 2004@Swapnil
+      SPRING_JPA_HIBERNATE_DDL_AUTO: update
+      SPRING_JPA_SHOW_SQL: "true"
+      GEMINI_API_KEY: AIzaSyDL_QU_eJH8L023ox9E6KYbtp_YCUHNwJ0
+      MAIL_USERNAME: swapnildhagdi@gmail.com
+      MAIL_PASSWORD: rvllwmhfqemucbqt
+    networks:
+      - resusync_net
+
+  frontend:
+    build: ./ResuSync
+    container_name: resusync_frontend
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+    environment:
+      VITE_API_BASE_URL: http://localhost:8080
+    networks:
+      - resusync_net
+
+volumes:
+  pgdata:
+
+networks:
+  resusync_net:

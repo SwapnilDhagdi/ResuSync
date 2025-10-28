@@ -1,0 +1,66 @@
+
+
+services:
+
+  - type: web
+    name: resusync-backend
+  
+    repo: SwapnilDhagdi/ResuSync
+    
+    
+    region: oregon 
+    plan: starter 
+  
+    rootDir: demo 
+    env: docker
+    port: 8080
+
+    envVars:
+
+      - key: SPRING_DATASOURCE_URL
+        fromDatabase: resusync-db
+        property: connectionString
+      - key: SPRING_DATASOURCE_USERNAME
+        fromDatabase: resusync-db
+        property: user
+      - key: SPRING_DATASOURCE_PASSWORD
+        fromDatabase: resusync-db
+        property: password
+
+      
+      
+      
+      
+      - key: GEMINI_API_KEY
+        value: AIzaSyDL_QU_eJH8L023ox9E6KYbtp_YCUHNwJ0_PLACEHOLDER
+      - key: MAIL_USERNAME
+        value: swapnildhagdi@gmail.com_PLACEHOLDER
+      - key: MAIL_PASSWORD
+        value: rvllwmhfqemucbqt_PLACEHOLDER
+      
+      
+
+      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
+        value: update
+      - key: SPRING_JPA_SHOW_SQL
+        value: "true"
+
+  - type: web
+    name: resusync-frontend
+    repo: SwapnilDhagdi/ResuSync 
+    plan: starter
+    
+    rootDir: ResuSync
+    env: docker
+    port: 80 
+    
+    
+    envVars:
+      - key: VITE_API_BASE_URL
+        value: /
+
+databases:
+  - name: resusync-db
+    plan: free 
+    databaseName: resusync
+    user: resusync_user 
