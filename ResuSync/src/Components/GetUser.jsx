@@ -1,11 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
 import List from './List'
+import instance from "../instance";
 function GetUser(){
     const [data,setData]=useState([0]);
     const handleClick=()=>{
         
-        axios.get("http://localhost:8080/api/getUser")
+        instance.get("/api/getUser")
         .then(function(response){
             console.log(response)
             setData(response.data)

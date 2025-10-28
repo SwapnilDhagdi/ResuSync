@@ -67,7 +67,7 @@ import { useLoading } from '../Context/LoadingContext.jsx';
     //     
     // })}
     
-    axios.post("http://localhost:8080/api/upload",formData,{
+    instance.post("/api/upload",formData,{
       withCredentials:true,
     }).then(function (res){
      
