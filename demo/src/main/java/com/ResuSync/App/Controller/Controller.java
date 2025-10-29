@@ -47,11 +47,14 @@ public class Controller {
     }
    
     @PostMapping("/register")
-    public ResponseEntity<String> saveUser(@RequestBody UserRequest user){
-  
+    public ResponseEntity<Integer> saveUser(@RequestBody UserRequest user){
+        Users user1 =userServ.getProfile(user.getEmail());
+        if(user1!=null){
+            return ResponseEntity.ok(-1);
+        }
         Users u=new Users(user.getName(), user.getEmail(), user.getPassword());
         userServ.saveUser(u);
-        return ResponseEntity.ok("Profile Created");
+        return ResponseEntity.ok(0);
     }
 
     @GetMapping("/getUser")
@@ -122,7 +125,6 @@ public class Controller {
         try{
             s=aiComparison.generateImporovmentPlan();
         }catch(IOException e){
-       
         }
         return s;
     }

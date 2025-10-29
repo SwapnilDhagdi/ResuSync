@@ -6,10 +6,10 @@ import Loader from './Loader.jsx';
 import { useAuth } from '../Context/AuthContext.jsx';
 import { FaEye } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa6";
-
+import {useLoading} from "../Context/LoadingContext.jsx"
 function SignUp({ formTitle, buttonText }){
   const navigate=useNavigate();
-  
+  const {showLoading,hideLoading} =useLoading();
   const [codes, setCodes] = useState(new Array(4).fill(''));
      const fields = [
        { name: 'name', label: 'name', type: 'text', required: true },
@@ -41,44 +41,53 @@ const [isHidden,setIsHidden]=useState(true);
     e.preventDefault();
     
     
-  instance.get('/api/sendEmail',{timeout:0,params:{email:formState.email,username:formState.name}})
-  .then(function (response){
-    if(response.data==-1){
-      setErrorMsg("Email already Present")
-    }else{
-      setErrorMsg(null);
-      setVerificationCode(response.data);
-      setCodeSent(true);
-    }
-  })
-  .catch(function(error){
-    console.log(error);
-  })
-} 
-const VerificationCodeInput = () => {
-        const callAPI=()=>{
-           instance.post('/api/register',{
-            name:formState.name,
-            email:formState.email,
-            password:formState.password
+      showLoading("Authenticating and adding to database");
+      instance.post('/api/register',{
+        name:formState.name,
+        email:formState.email,
+        password:formState.password
         })
-        .then(function(response){
-            if(!response.data){
-                setErrorMsg("Email already present");
-            }else{ 
-                  setErrorMsg("You are Authorized");
-                  login(formState)
-                  navigate("/Login")
-            }
-        })
-        .catch(function(error){
-            console.log(error)
+      .then(function(response){
+        hideLoading();
+        if(response.data==-1){
+          setErrorMsg("Email already present");
+        }else{
+          setErrorMsg("You are Authorized");
+          login(formState)
+          navigate("/Login")
+      }
+  })
+      .catch(function(error){
+        console.log(error)
         })
         .finally(function(){
-         
+              hideLoading();
         })
+} 
+const VerificationCodeInput = () => {
+        // const callAPI=()=>{
+        //    instance.post('/api/register',{
+        //     name:formState.name,
+        //     email:formState.email,
+        //     password:formState.password
+        // })
+        // .then(function(response){
+        //     if(!response.data){
+        //         setErrorMsg("Email already present");
+        //     }else{ 
+        //           setErrorMsg("You are Authorized");
+        //           login(formState)
+        //           navigate("/Login")
+        //     }
+        // })
+        // .catch(function(error){
+        //     console.log(error)
+        // })
+        // .finally(function(){
+         
+        // })
       
-        }
+        // }
        
         const handleChange = (e, index) => {
             const value = e.target.value;
