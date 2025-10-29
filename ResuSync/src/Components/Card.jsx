@@ -70,10 +70,14 @@ import { useLoading } from '../Context/LoadingContext.jsx';
     instance.post("/api/upload",formData,{
       withCredentials:true,
     }).then(function (res){
-     
       hideLoading();
       setButtonState(false);    
     }).catch(function(error){
+      console.log(error);
+      s
+    })
+    .finally(function(){
+      hideLoading();
     })
     
     setSubmissionMessage(`✅ Success! Files prepared for upload:
