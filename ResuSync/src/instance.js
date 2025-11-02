@@ -4,9 +4,6 @@ const instance=axios.create({
 
     baseURL:"https://resusync-backend.onrender.com",
     timeout:15000,
-    headers:{
-        'Content-Type':'application/json'
-    },
     withCredentials:true
 });
 

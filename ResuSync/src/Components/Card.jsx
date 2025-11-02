@@ -74,7 +74,7 @@ import { useLoading } from '../Context/LoadingContext.jsx';
       setButtonState(false);    
     }).catch(function(error){
       console.log(error);
-      s
+      
     })
     .finally(function(){
       hideLoading();
