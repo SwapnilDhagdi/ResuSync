@@ -84,6 +84,8 @@ public class Controller {
            userServ.saveFile(newFile);
             return ResponseEntity.ok("File Uploaded successfully");
         }catch(Exception e){
+            System.out.println("error caught at upload");
+            System.out.println(e.getMessage());
             return ResponseEntity.status(500).body("File upload failed");
         }
         
