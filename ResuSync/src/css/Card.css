@@ -1,4 +1,4 @@
-/* Container and Form Styling */
+
 .file-form-container {
   padding: 25px;
   border: 1px solid #ddd;
@@ -19,11 +19,10 @@
   font-family: Arial, sans-serif;
 }
 
-/* Input Group Styling */
 .file-input-group {
   margin-bottom: 20px;
   padding: 15px;
-  border: 1px dashed #b0c4de; /* Light blue dashed border */
+  border: 1px dashed #b0c4de;
   border-radius: 6px;
   background-color: #f9f9ff;
 }
@@ -36,15 +35,15 @@
   font-family: Arial, sans-serif;
 }
 
-/* Customizing the File Input */
+
 .file-input-group input[type="file"] {
-  /* Allows the default file selector to show up on a new line */
+ 
   display: block; 
   margin-top: 5px;
   padding: 5px;
 }
 
-/* Selected File Text */
+
 .file-input-group small {
   display: block;
   margin-top: 5px;
@@ -52,7 +51,7 @@
   font-size: 0.9em;
 }
 
-/* Submit Button Styling */
+
 .file-submit-button {
   width: 100%;
   padding: 12px 15px;
@@ -75,7 +74,7 @@
   opacity: 0.7;
 }
 
-/* Submission Message Styling */
+
 .submission-message {
   margin-top: 25px;
   padding: 15px;
@@ -84,10 +83,9 @@
   color: #155724;
   border-radius: 6px;
   font-family: monospace;
-  white-space: pre-wrap; /* Ensures line breaks in the message are respected */
+  white-space: pre-wrap;
 }
 
-/* Error/Validation Message Styling (for the "Please select both files" warning) */
 .submission-message.error {
     border-color: #dc3545;
     background-color: #f8d7da;

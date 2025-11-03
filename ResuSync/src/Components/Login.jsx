@@ -18,11 +18,9 @@ function Login(){
             <NavLink to={"/Signup"}>
                 <div className="Sign_up"> <button className="Signup_Button">Sign Up</button></div>
             </NavLink>   
-            <button className="Login_Button" onClick={logout}>
-                Logout
-            </button>
+
             </>:""
-            }     
+            }
         </div>
     );
 }

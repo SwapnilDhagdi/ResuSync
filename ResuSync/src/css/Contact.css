@@ -1,11 +1,10 @@
-/* Container */
+
 .contact-container {
     width: 100%;
     min-height: 100vh;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
-/* Header Section */
 .contact-header {
     padding: 4rem 2rem 2rem;
     text-align: center;
@@ -47,7 +46,6 @@
     to { opacity: 1; }
 }
 
-/* Contact Content */
 .contact-content {
     padding: 3rem 2rem;
 }
@@ -60,7 +58,6 @@
     margin: 0 auto;
 }
 
-/* Contact Cards */
 .contact-card {
     background: white;
     border-radius: 20px;
@@ -142,7 +139,7 @@
     word-break: break-word;
 }
 
-/* Card Actions */
+
 .card-actions {
     display: flex;
     gap: 1rem;
@@ -187,7 +184,7 @@
     width: 100%;
 }
 
-/* Quick Info Card */
+
 .info-card {
     background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
@@ -216,7 +213,7 @@
     color: #4a5568;
 }
 
-/* Social Section */
+
 .social-section {
     padding: 3rem 2rem;
     text-align: center;
@@ -277,7 +274,7 @@
     font-size: 1.5rem;
 }
 
-/* Footer Message */
+
 .contact-footer {
     padding: 2rem 2rem 4rem;
 }
@@ -309,7 +306,6 @@
     line-height: 1.6;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .contact-title {
         font-size: 2.5rem;
@@ -357,7 +353,7 @@
     }
 }
 
-/* Copy Success Animation */
+
 @keyframes copySuccess {
     0% {
         transform: scale(1);

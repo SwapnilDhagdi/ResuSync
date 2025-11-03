@@ -201,7 +201,7 @@ const VerificationCodeInput = () => {
             ) : (
               <input
 
-              type={field.type==='password'?(!isHidden)?"password":"text":field.type}    
+              type={field.type==='password'?(isHidden)?"password":"text":field.type}    
 
               id={field.name}
               name={field.name}
@@ -216,7 +216,7 @@ const VerificationCodeInput = () => {
         <button type="submit" className="form-submit-btn">
           {buttonText || 'Submit'}
         </button>
-        {errorMsg && <h3> {errorMsg}</h3>}
+        {errorMsg&&<div className="login-error-message" role="alert"> <p>{errorMsg}</p></div>}
       </form>
     </div>
     }

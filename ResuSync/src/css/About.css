@@ -1,4 +1,4 @@
-/* Container */
+
 .about-container {
     width: 100%;
     min-height: 100vh;
@@ -6,7 +6,8 @@
     overflow-x: hidden;
 }
 
-/* Hero Section */
+
+
 .hero-section {
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 6rem 2rem;
@@ -82,7 +83,6 @@
     opacity: 0.9;
 }
 
-/* Section Styling */
 .section-header {
     text-align: center;
     margin-bottom: 3rem;
@@ -103,7 +103,8 @@
     border-radius: 2px;
 }
 
-/* Mission Section */
+
+
 .mission-section {
     padding: 5rem 2rem;
     max-width: 900px;
@@ -122,7 +123,7 @@
     border-left: 5px solid #667eea;
 }
 
-/* Features Section */
+
 .features-section {
     padding: 5rem 2rem;
     background: white;
@@ -174,7 +175,7 @@
     line-height: 1.7;
 }
 
-/* Process Section */
+
 .process-section {
     padding: 5rem 2rem;
     max-width: 1000px;
@@ -243,7 +244,8 @@
     border-radius: 2px;
 }
 
-/* Technology Section */
+
+
 .tech-section {
     padding: 5rem 2rem;
     background: white;
@@ -286,7 +288,7 @@
     color: #718096;
 }
 
-/* Why Choose Section */
+
 .why-choose-section {
     padding: 5rem 2rem;
     max-width: 900px;
@@ -340,7 +342,7 @@
     font-weight: 700;
 }
 
-/* CTA Section */
+
 .cta-section {
     padding: 5rem 2rem;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -384,7 +386,7 @@
     background: #ffeaa7;
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;

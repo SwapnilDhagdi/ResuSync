@@ -40,7 +40,6 @@ public class EmailService{
         // } 
 
          try{
-            System.out.println(pass);
             mimeMessageHelper.setFrom("swapnildhagdi@gmail.com");
             mimeMessageHelper.setTo(toEmail);
             mimeMessageHelper.setSubject(subject);

@@ -1,41 +1,39 @@
-/* Container for the entire footer */
+
 .footer-container {
-  background-color: #333; /* Dark background */
-  color: #fff; /* White text */
-  padding: 20px 0; /* Vertical padding */
+  background-color: #333;
+  color: #fff; 
+  padding: 20px 0; 
   width: 100%;
   margin-top: auto;
-  position: fixed; /* Helpful for pushing to the bottom of the page content */
+  position: fixed;
 }
 
-/* Centralized content area */
+
 .footer-content {
   max-width: 1200px;
-  margin: 0 auto; /* Center the content */
+  margin: 0 auto; 
   padding: 0 20px;
   display: flex;
   flex-direction: column;
-  align-items: center; /* Center items horizontally */
+  align-items: center; 
   text-align: center;
 }
 
-/* Styles for the links section */
 .footer-links {
   margin-bottom: 15px;
 }
 
 .footer-links a {
-  color: #ccc; /* Lighter link color */
-  text-decoration: none; /* Remove underline */
-  margin: 0 15px; /* Spacing between links */
+  color: #ccc;
+  text-decoration: none;
+  margin: 0 15px; 
   transition: color 0.3s;
 }
 
 .footer-links a:hover {
-  color: #fff; /* White on hover */
+  color: #fff; 
 }
 
-/* Styles for the info section */
 .footer-info p {
   margin: 5px 0;
   font-size: 0.9em;

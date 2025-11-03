@@ -60,17 +60,17 @@
 .form-submit-btn:hover {
   background-color: #0056b3;
 }
-/*verification code*/
+
 .code-input-container {
     display: flex;
-    gap: 15px; /* Space between the input boxes */
+    gap: 15px;
     justify-content: center;
     padding: 20px;
 }
 
 .code-input-box {
-    width: 60px; /* Size of the box */
-    height: 70px; /* Height of the box */
+    width: 60px; 
+    height: 70px;
     text-align: center;
     font-size: 28px;
     font-weight: bold;
@@ -81,6 +81,6 @@
 }
 
 .code-input-box:focus {
-    border-color: #007bff; /* Highlight color on focus */
+    border-color: #007bff;
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }

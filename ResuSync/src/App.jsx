@@ -15,11 +15,12 @@ import Loader from "./Components/Loader";
 import ImprovementPlan from './Components/ImprovementPlan';
 import { LoadingProvider } from './Context/LoadingContext';
 import AppWithLoader from "./Components/AppWithLoader";
+import instance from './instance';
 function App() {
   const[isLogin,setIsLogin]=useState(false);
 
   function handleRequest(){
-    axios.get("http://localhost:8080/api")
+    instance.get("/api")
     .then(function(response){
       console.log(response);
     })

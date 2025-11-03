@@ -1,6 +1,6 @@
 
 import React, { useState ,useRef} from 'react';
-import '../css/Card.css'; // <-- Import the CSS file
+import '../css/Card.css'; 
 import axios from 'axios';
 import instance from '../instance';
 import { Routes,useNavigate} from 'react-router-dom';
@@ -91,7 +91,7 @@ import { useLoading } from '../Context/LoadingContext.jsx';
       <h2>Document Upload</h2>
       <form onSubmit={handleSubmit} encType='multipart/form-data'>
         <div className="file-input-group">
-          <label htmlFor="fileOne">Upload Contract Document:</label>
+          <label htmlFor="fileOne">Upload User Resume:</label>
           <input
             id="fileOne"
             type="file"
@@ -103,7 +103,7 @@ import { useLoading } from '../Context/LoadingContext.jsx';
 
   
         <div className="file-input-group">
-          <label htmlFor="fileTwo">Upload Photo ID/Verification:</label>
+          <label htmlFor="fileTwo">Upload Job Description:</label>
           <input
             id="fileTwo"
             type="file"

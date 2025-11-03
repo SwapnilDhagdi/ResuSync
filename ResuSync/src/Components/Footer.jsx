@@ -1,8 +1,8 @@
 import React from 'react';
-import '../css/Footer.css'; // Import the CSS file
+import '../css/Footer.css'; 
 
 const Footer = () => {
-  // Get the current year dynamically for the copyright notice
+
   const currentYear = new Date().getFullYear();
 
   return (
@@ -11,15 +11,13 @@ const Footer = () => {
         
        
         <div className="footer-links">
-          <a href="/about">About Us</a>
-          <a href="/services">Services</a>
+          <a href="/about">About Us</a>      
           <a href="/contact">Contact</a>
-          <a href="/privacy">Privacy Policy</a>
         </div>
 
         <div className="footer-info">
-          <p>&copy; {currentYear} My Awesome App. All rights reserved.</p>
-          <p>Built with React.</p>
+          <p>&copy; {currentYear} ResuSync. All rights reserved.</p>
+          <p>Swapnil Dhagdi</p>
         </div>
 
       </div>

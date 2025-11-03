@@ -5,14 +5,14 @@ import { Navigate,useNavigate } from 'react-router-dom';
 import { useAuth } from '../Context/AuthContext.jsx';
 import { FaEye } from "react-icons/fa6";
 import { FaEyeSlash } from "react-icons/fa6";
-
+import { useLoading } from '../Context/LoadingContext.jsx';
 
 function Form({ formTitle, buttonText }){
      const fields = [
   { name: 'email', label: 'email', type: 'email', required: true },
   { name: 'password', label: 'password', type: 'password', required: true },
 ];
-
+  const {showLoading,hideLoading}=useLoading();
   const {login}=useAuth();
   const [formState, setFormState] = useState(
     fields.reduce((acc, field) => ({ ...acc, [field.name]: '' }), {})
@@ -40,11 +40,13 @@ function Form({ formTitle, buttonText }){
   }
   const handleSubmit = (e) => {
     e.preventDefault();
+    showLoading("Validating")
     instance.post('/api/validate',{
         email:formState.email,
         password:formState.password
     })
     .then(function(response){
+        hideLoading();
         if(!response.data){
           setErrorMsg("Invalid data")
         }else{
@@ -60,6 +62,7 @@ function Form({ formTitle, buttonText }){
         }
     })
     .finally(function(){
+      hideLoading();
         ref.current.email.value="";
         ref.current.password.value="";
 
@@ -107,7 +110,7 @@ function Form({ formTitle, buttonText }){
           border: '1px solid red', 
           backgroundColor: '#ffe6e6' 
         }}>
-          <strong>Error:</strong> {errorMsg}
+          {errorMsg && <div className="login-error-message" role="alert"><p>{errorMsg}</p></div>}
         </div>
         }
       </form>
